@@ -32,7 +32,7 @@ jobs:
       - nscloud-cache-tag-nix-store-cache-ubuntu-26.04-amd64
     timeout-minutes: ${{ startsWith(github.ref, 'refs/tags/') && 45 || 30 }}
     steps:
-      - uses: AtomiCloud/actions.setup-nix@v3
+      - uses: AtomiCloud/actions.setup-nix@v4
       - uses: AtomiCloud/actions.setup-docker@v2
       - name: Build and push Docker
         env:
